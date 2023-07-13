@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', 'Restaurante KONECTA - Productos')
+@section('title', 'Cafetería KONECTA - Productos')
 
 @section('content')
     <div class="container">
@@ -40,7 +40,7 @@
                                         <input type="number" class="form-control" name="precio" id="precio" value="{{$producto->precio}}" required>
                                     </div>
                                     <div class="col-4">
-                                        <label for="peso">Peso</label>
+                                        <label for="peso">Peso(gr)</label>
                                         <input type="number" class="form-control" name="peso" id="peso" value="{{$producto->peso}}" required>
                                     </div>
                                     <div class="col-4">

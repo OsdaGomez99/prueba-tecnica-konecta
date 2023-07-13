@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', 'Restaurante KONECTA - Ventas')
+@section('title', 'Cafetería KONECTA - Ventas')
 
 @section('content')
     <div class="container">
@@ -11,15 +11,9 @@
                         <h3>Registrar Venta</h3>
                     </div>
                     <div class="card-body">
-                        @if ($errors->any())
-                            <div class="alert alert-danger alert-dismissible" role="alert">
-                                <strong>¡Revise todos los campos!</strong>
-                                    @foreach ($errors->all() as $error)
-                                        <span class="badge bg-danger">{{ $error }}</span>
-                                    @endforeach
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
+                        @if (session('error'))
+                            <div class="alert alert-danger">
+                                {{ session('error') }}
                             </div>
                         @endif
                         <form method="POST" action="{{ route('ventas.store') }}">

@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', 'Restaurante KONECTA - Productos')
+@section('title', 'Cafetería KONECTA - Productos')
 
 @section('content')
 
@@ -33,7 +33,7 @@
                                         <th>Nombre</th>
                                         <th>Referencia</th>
                                         <th>Precio</th>
-                                        <th>Peso</th>
+                                        <th>Peso(gr)</th>
                                         <th>Categoría</th>
                                         <th>Stock</th>
                                         <th>Fecha de creación</th>
@@ -45,7 +45,7 @@
                                         <tr>
                                             <td>{{ $producto->nombre }}</td>
                                             <td>{{ $producto->referencia }}</td>
-                                            <td>{{ $producto->precio }}</td>
+                                            <td>{{ number_format($producto->precio) }}</td>
                                             <td>{{ $producto->peso }}</td>
                                             <td>{{ $producto->categoria }}</td>
                                             <td>{{ $producto->stock }}</td>

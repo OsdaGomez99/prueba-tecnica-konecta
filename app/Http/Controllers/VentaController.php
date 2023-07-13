@@ -47,6 +47,10 @@ class VentaController extends Controller
             'cantidad' => 'required',
         ]);
 
+        if ($producto->stock < $request->cantidad) {
+            return redirect()->back()->with('error', 'No hay suficiente stock disponible.');
+        }
+
         Venta::create([
             'producto_id' => $request->producto_id,
             'cantidad' => $request->cantidad,

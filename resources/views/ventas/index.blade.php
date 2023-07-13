@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', 'Restaurante KONECTA - Ventas')
+@section('title', 'Cafetería KONECTA - Ventas')
 
 @section('content')
 
