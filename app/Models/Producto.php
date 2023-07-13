@@ -17,7 +17,12 @@ class Producto extends Model
         'stock',
         'fecha_creacion'
     ];
-    
+
     use HasFactory;
+
+    public function ventas()
+    {
+        return $this->hasMany('\App\Models\Venta');
+    }
 
 }

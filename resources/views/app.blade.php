@@ -21,7 +21,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand">
-                    Restaurante KONECTA
+                    @yield('title')
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -39,7 +39,7 @@
                             <a class="nav-link" href="{{route('productos.index')}}">Productos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Ventas</a>
+                            <a class="nav-link" href="{{route('ventas.index')}}">Ventas</a>
                         </li>
                     </ul>
                 </div>

@@ -1,5 +1,7 @@
 @extends('app')
 
+@section('title', 'Restaurante KONECTA - Productos')
+
 @section('content')
 
     <div class="container">
